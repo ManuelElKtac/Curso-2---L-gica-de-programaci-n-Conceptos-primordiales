@@ -1,0 +1,54 @@
+<meta charset="UTF-8">
+<h1>PROGRAMA JUEGO DE ADIVIDACION</h1>
+
+<body></body>
+<script>
+
+    function saltarLinea() {  // shift + alt + tecla de abajo = copia linea
+
+        document.write("<br>")
+        document.write("<br>")
+        document.write("<br>")
+
+    }
+
+    function imprimir(frase) {
+
+        document.write(frase);
+        saltarLinea();
+
+    }
+
+    var numeroPensado = Math.round(Math.random() * 10);
+    var intentos = 3;
+    var contador = 1;
+
+
+    while (contador <= intentos) {
+
+        var numeroLanzado = parseInt(prompt("Ingrese un numero entre 0-10"))
+
+
+        if (numeroPensado == numeroLanzado) {
+            alert("Usted GANO!!! en el intento: " + contador)
+            break;
+        }
+
+
+        else {
+            alert("Ustede erró, intentalo de nuevo")
+        }
+        contador++;
+    }
+
+    if (numeroPensado == numeroLanzado) {
+        imprimir("Usted GANO!!! en el intento: " + contador + " el numero era " + numeroPensado)
+
+    }
+    else {
+        imprimir("ustes erro, el numero pensado era: " + numeroPensado)
+
+
+    }
+    imprimir("fin")
+</script>

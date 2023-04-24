@@ -1,0 +1,44 @@
+<meta charset="UTF-8">
+<script>
+
+    function saltarLinea() {
+
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+
+        document.write(frase);
+        saltarLinea();
+    }
+
+    function sortearNumero() {
+
+        return Math.round(Math.random() * 100);
+    }
+
+    var numeroPensado = sortearNumero();
+
+    var numeroLanzado = parseInt(prompt("Ingrese un número entre 0-10: "));
+
+    var notaPerdiste = ("¡Se acabó, tú perdiste!")
+
+
+
+    if (numeroLanzado == numeroPensado) {
+
+        imprimir("Uau! Vos acertaste, pues yo pensé en el número " + numeroPensado);
+    }
+    else {
+
+        for (i = 0; i < 10; i++)
+            imprimir(notaPerdiste)
+    }
+
+
+
+
+
+
+
+</script>
